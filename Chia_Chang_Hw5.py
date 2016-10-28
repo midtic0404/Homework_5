@@ -1,3 +1,9 @@
+"""
+Ask the user for pin number 3 times
+Usage:
+    python3 Chia_Chang_Hw5.py
+"""
+
 #!usr/bin/env python3
 import sys
 
@@ -5,6 +11,13 @@ import sys
 pin = "1234"
 
 def GetInput():
+    """
+    Get the user input for pin number
+    Check the lenth and format of the user input
+
+    Returns:
+        The pin from user input
+    """
     print("Enter your pin: ")
     uPin = input()
 
