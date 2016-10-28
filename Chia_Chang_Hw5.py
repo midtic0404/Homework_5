@@ -9,9 +9,9 @@ def GetInput():
     uPin = input()
 
     if(len(uPin) != 4):
-        print("Wrong Length")
-    else:
-        print("Good format")
+        print("Invalid PIN length. Correct format is : <9876>")
+    elif(not uPin.isdigit()):
+        print("Invalid PIN character. Correct format is: <9876>")
     
     return uPin
 
@@ -19,12 +19,20 @@ def GetInput():
 
 count = 0
 while (count < 3):
-    print("Hi")
-    count  += 1
+    uPin = GetInput()
+    
+    if uPin == pin:
+        print("Your PIN is correct")
+        break
+    else:
+        print("Your PIN is incorrect")
+
+    count += 1
 
 
-
-
+if count == 3:
+    print("Your bank card is blocked")
+    exit(1)
 
 
 def main():
