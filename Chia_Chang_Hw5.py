@@ -29,27 +29,33 @@ def GetInput():
     return uPin
 
 
+def process():
+    """
+    Process the user input if match to 1234
+    Stop the program if user input wrong pin 3 times
+    """
 
-count = 0
-while (count < 3):
-    uPin = GetInput()
-    
-    if uPin == pin:
-        print("Your PIN is correct")
-        break
-    else:
-        print("Your PIN is incorrect")
+    count = 0
+    while (count < 3):
+        uPin = GetInput()
+        
+        if uPin == pin:
+            print("Your PIN is correct")
+            break
+        else:
+            print("Your PIN is incorrect")
 
-    count += 1
+        count += 1
 
 
-if count == 3:
-    print("Your bank card is blocked")
-    exit(1)
+    if count == 3:
+        print("Your bank card is blocked")
+        exit(1)
 
 
 def main():
-    pass
+    process()
+    exit(0)
 
 if __name__ == "__main__":
     main()
